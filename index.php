@@ -20,6 +20,7 @@
 
 <body>
 
+<?php include './database.php'; ?>
 <?php include './partials/header.php'; ?>
 
 <main role="main" class="container">
