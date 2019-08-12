@@ -60,7 +60,13 @@
         <div class="col-sm-8 blog-main">
             <?php 
                 if($post){
-                    $post->print();
+                    $post->print(); ?>
+                    <form method="POST" action="delete-post.php" name="deletePostForm">
+                        <button id="deletePost" class="btn btn-primary" >Delete this post</button>
+                        <input type="hidden" value="<?php echo $post_id ?>" name="id"/>
+                    </form>
+                    <br>
+                <?php
                     include './create-comment-form.php';
                     include './comments.php';
                 }else{
@@ -68,7 +74,7 @@
                 }
             ?>
         </div>
-
+    
         <?php include './partials/sidebar.php' ?>
 
     </div>
@@ -76,6 +82,14 @@
 </main>
 
 <?php include './partials/footer.php' ?>
-
+<script>
+    document.getElementById("deletePost").addEventListener("click", function(event){
+        console.log('asdasd');
+        event.preventDefault()
+        if(window.confirm("Do you really want to delete this post?")){
+            document.deletePostForm.submit();
+        }
+    });
+</script>
 </body>
 </html>
