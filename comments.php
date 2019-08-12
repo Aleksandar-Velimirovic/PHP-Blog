@@ -22,8 +22,9 @@
 </ul>
 
 <script>
-    var comments = document.getElementById('postComments')
-    var button = document.getElementById('button')
+    var comments = document.getElementById('postComments');
+    var button = document.getElementById('button');
+
     function hideComment(){
         
         if(button.innerHTML == "Show Comments"){

@@ -61,6 +61,7 @@
             <?php 
                 if($post){
                     $post->print();
+                    include './create-comment-form.php';
                     include './comments.php';
                 }else{
                     echo $error;
