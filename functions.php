@@ -7,6 +7,7 @@ function redirectTo(string $location) : void {
 
 function redirectToHome() : void {
     redirectTo('');
+    exit;
 }
 
 function getDatabaseConnection() {
